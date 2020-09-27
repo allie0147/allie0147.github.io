@@ -56,7 +56,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
 search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search_provider          : google # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -100,8 +100,6 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "" #description
   location         : "Seoul, Korea"
-  email            : "allie0147@gmail.com"
-  github           : "allie0147"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
