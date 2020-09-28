@@ -21,7 +21,7 @@ categories: projects android
 *Glide* (<https://github.com/bumptech/glide>)    
 *android-ago* (<https://github.com/curioustechizen/android-ago>)    
 *PageIndicatiorView* (<https://github.com/romandanylyk/PageIndicatorView>)    
-*CricleImageView* (<https://github.com/hdodenhof/CircleImageView>)
+*CricleImageView* (<https://github.com/hdodenhof/CircleImageView>)    
 *Shimmer* (<https://github.com/facebook/shimmer-android/>)
 
 2. 화면 구성   
