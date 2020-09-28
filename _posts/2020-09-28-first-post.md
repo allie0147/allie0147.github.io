@@ -98,7 +98,7 @@ categories: projects android
   - **`RecyclerView`** with **`ChatListAdapter(FirebaseRecyclerAdapter)`**
   - Get data for list of chat rooms from **`Realtime DB('chat-lists'-'mUser.uId')`**
   - Adapter gets user's lists, the others' profile image and **`the most recent message`** for every single lists
- - Clicking single list passes **`chatroom's user id`** to **`ChattingActivity`**
+  - Clicking single list passes **`chatroom's user id`** to **`ChattingActivity`**
 ``` java
 public class ChatListAdapter extends FirebaseRecyclerAdapter<HashMap<String, String>, ChatListAdapter.ChatListViewHolder> {
    
