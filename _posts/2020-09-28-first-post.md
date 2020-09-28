@@ -98,11 +98,12 @@ categories: projects android
   - **`RecyclerView`** with **`ChatListAdapter(FirebaseRecyclerAdapter)`**
   - Get data for list of chat rooms from **`Realtime DB('chat-lists'-'mUser.uId')`**
   - Adapter gets user's lists, the others' profile image and **`the most recent message`** for every single lists
+ - Clicking single list passes **`chatroom's user id`** to **`ChattingActivity`**
 ``` java
 public class ChatListAdapter extends FirebaseRecyclerAdapter<HashMap<String, String>, ChatListAdapter.ChatListViewHolder> {
    
     ...<codes>...
-
+    // get recent message
     protected void onBindViewHolder(@NonNull ChatListViewHolder holder, int position, @NonNull HashMap<String, String> model) {
     FirebaseDatabase.getInstance().getReference().child("user-chats").child(mUid)
                     .child(model.get("uId")).getRef().limitToLast(1)
@@ -130,13 +131,14 @@ public class ChatListAdapter extends FirebaseRecyclerAdapter<HashMap<String, Str
     }
 }
 ```
-  - Clicking single list passes **`chatroom's user id`** to **`ChattingActivity`**
 - 11. *Chat room*
   - One to one real-time chat service
   - **`Toolbar`** shows a nickname of the other user
   - Sending messages and image(not yet released)
   - Dependent on **`ItemViewType`**, **`Adapter`** creates **`ViewHolder`**
   - This is because chat bubbles with messages should attach to different position of a chat room (left and right)
+  - The other's chat bubble has user profile
+  - Each chat bubble has timestamp
 ``` java
 public class ChatAdapter extends FirebaseRecyclerAdapter<Chat, ChatViewHolder> {
     private FirebaseUser mUser;
@@ -170,8 +172,6 @@ public class ChatAdapter extends FirebaseRecyclerAdapter<Chat, ChatViewHolder> {
     }
 }
 ```
-   - The other's chat bubble has user profile
-   - Each chat bubble has timestamp
 - 12. *Settings*
   - Show user's profile
   - **`프로필 수정하기 Button`** send user to **`EditProfileActivity`**
