@@ -170,8 +170,8 @@ public class ChatAdapter extends FirebaseRecyclerAdapter<Chat, ChatViewHolder> {
     }
 }
 ```
-  - The other's chat bubble has user profile
-  - Each chat bubble has timestamp
+   - The other's chat bubble has user profile
+   - Each chat bubble has timestamp
 - 12. *Settings*
   - Show user's profile
   - **`프로필 수정하기 Button`** send user to **`EditProfileActivity`**
